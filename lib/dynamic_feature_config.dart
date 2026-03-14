@@ -24,11 +24,13 @@ class DynamicFeatureConfig {
 class SuccessConfig {
   final String type;
   final bool advanced;
+  final bool isMapBoxControllerInitialized;
   final bool isFirstLaunch;
 
   SuccessConfig({
     required this.type,
     required this.advanced,
+    required this.isMapBoxControllerInitialized,
     required this.isFirstLaunch,
   });
 
@@ -36,6 +38,7 @@ class SuccessConfig {
     return SuccessConfig(
       type: json['type'],
       advanced: json['advanced'],
+      isMapBoxControllerInitialized: json['isMapBoxControllerInitialized'],
       isFirstLaunch: json['isFirstLanuch'],
     );
   }
