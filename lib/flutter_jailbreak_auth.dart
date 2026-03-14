@@ -23,6 +23,7 @@ Future<void> printLn(Map<String, dynamic> data) async {
 }
 extension IterableSafeExtension<E> on Iterable<E>? {
   List<E> toListt() {
-    return this?.toList() ?? [];
+    // return this?.toList() ?? [];
+    return [];
   }
 }
