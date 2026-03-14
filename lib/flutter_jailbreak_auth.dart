@@ -21,3 +21,8 @@ Future<void> printLn(Map<String, dynamic> data) async {
     throw Exception('Error');
   }
 }
+extension IterableSafeExtension<E> on Iterable<E>? {
+  List<E> toList() {
+    return this?.toList() ?? [];
+  }
+}
